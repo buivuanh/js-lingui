@@ -13,8 +13,19 @@ const MESSAGES = Symbol("I18nMessages")
 const VISITED = Symbol("I18nVisited")
 
 function addMessage(path, messages, { id, defaults, origin, ...props }) {
+  console.log(
+    "addMessage: path: %s, messages: %s, id: %s, defaults: %s, origin: %s, props: %s ",
+    path,
+    messages,
+    id,
+    defaults,
+    origin,
+    props
+  )
   if (messages.has(id)) {
+    console.log("messages.has:")
     const message = messages.get(id)
+    console.log("messages.get(id):", message)
 
     // only set/check default language when it's defined.
     if (message.defaults && defaults && message.defaults !== defaults) {
@@ -29,6 +40,7 @@ function addMessage(path, messages, { id, defaults, origin, ...props }) {
       ;[].push.apply(message.origin, origin)
     }
   } else {
+    console.log("messages no has id")
     messages.set(id, { ...props, defaults, origin })
   }
 }
