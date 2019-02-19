@@ -1,6 +1,6 @@
 {
-  "name": "@lingui/cli",
-  "version": "0.0.0-managed-by-release-script",
+  "name": "vuanh",
+  "version": "0.0.0",
   "description": "CLI for working wit message catalogs",
   "keywords": [
     "cli",
@@ -11,13 +11,15 @@
     "i9n",
     "translation"
   ],
-  "repository": "lingui/js-lingui",
-  "bugs": "https://github.com/lingui/js-lingui/issues",
-  "license": "MIT",
-  "author": {
-    "name": "Tomáš Ehrlich",
-    "email": "tomas.ehrlich@gmail.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lingui/js-lingui.git"
   },
+  "bugs": {
+    "url": "https://github.com/lingui/js-lingui/issues"
+  },
+  "license": "MIT",
+  "author": "Tomáš Ehrlich <tomas.ehrlich@gmail.com>",
   "main": "index.js",
   "bin": {
     "lingui": "./lingui.js"
@@ -67,5 +69,12 @@
   "peerDependencies": {
     "babel-core": "6.x || ^7.0.0-bridge.0",
     "babel-plugin-macros": "^2.4.2"
+  },
+  "homepage": "https://github.com/lingui/js-lingui#readme",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
